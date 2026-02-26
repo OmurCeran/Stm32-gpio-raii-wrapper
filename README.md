@@ -1,5 +1,3 @@
----
-
 # STM32 Modern C++ & RTOS Architecture Suite
 
 This repository demonstrates a **Modern C++ (C++17)** and **Real-Time OS** approach to embedded development on the **STM32F4 Discovery** board. It bridges the gap between high-level software patterns and low-level hardware control, moving away from traditional procedural C-style development.
@@ -42,9 +40,5 @@ This repository demonstrates a **Modern C++ (C++17)** and **Real-Time OS** appro
 3. Press `Ctrl+Shift+P` and select `CMake: Configure` (Select your ARM GCC toolchain).
 4. Press `F7` (or use the Build button) to compile the project.
 5. Press `F5` to flash the firmware and start a live debugging session.
-
----
-
-*Developed by Ömür Ceran to explore the intersection of modern software engineering and high-performance embedded systems.*
 
 ---
