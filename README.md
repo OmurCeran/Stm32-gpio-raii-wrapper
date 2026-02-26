@@ -1,39 +1,54 @@
-# STM32 Modern C++ Base Project
+Harika bir özet oldu. İki farklı projenin (Temel C++ ve Gelişmiş RTOS/DMA) ortak yönlerini birleştiren, teknik derinliği yüksek ve profesyonel bir **README.md** hazırladım. Bu yapıyı doğrudan GitHub depona kopyalayıp yapıştırabilirsin.
 
-This repository demonstrates a **Modern C++ (C++17)** approach to embedded development on the **STM32F4 Discovery** board.
+---
 
-Instead of the traditional C-style HAL usage, this project utilizes **RAII (Resource Acquisition Is Initialization)** and **Object-Oriented Programming** principles to create safer and cleaner hardware abstractions.
+# STM32 Modern C++ & RTOS Architecture Suite
+
+This repository demonstrates a **Modern C++ (C++17)** and **Real-Time OS** approach to embedded development on the **STM32F4 Discovery** board. It bridges the gap between high-level software patterns and low-level hardware control, moving away from traditional procedural C-style development.
 
 ## 🚀 Key Features
 
-* **Modern C++17:** Uses `std::unique_ptr`, `std::vector`, and `auto` for memory safety and readability.
-* **RAII Wrapper:** GPIO pins are initialized within the constructor and cleaned up (if necessary) in the destructor.
-* **Polymorphism:** An abstract `ILed` interface allows for hardware-agnostic application logic.
-* **Build System:** Fully configured **CMake** setup, replacing proprietary IDE project files.
-* **Toolchain:** Designed for **VS Code** with Cortex-Debug and CMake Tools extensions.
+* **Modern C++17:** Leverages `std::unique_ptr`, `std::vector`, and `auto` to ensure memory safety and zero-cost abstractions.
+* **RAII Hardware Wrappers:** Resource management is handled via **RAII (Resource Acquisition Is Initialization)**; peripherals like GPIO and UART are initialized in constructors and safely managed throughout their lifecycle.
+* **Asynchronous DMA Architecture:** High-performance communication using **Circular DMA** and **UART Idle Line Detection** for non-blocking, variable-length data transfers.
+* **RTOS Integration:** Fully synchronized with **FreeRTOS**, using binary semaphores to eliminate CPU-heavy polling and transition tasks into power-efficient blocked states during hardware I/O.
+* **Hardware Agnostic Logic:** Abstract interfaces (`ILed`, `IComm`) allow application logic to remain decoupled from the specific STM32 HAL implementation.
 
 ## 🛠️ Tech Stack
 
 * **Hardware:** STM32F407VG (Discovery Board)
 * **Language:** C++17 / C11
+* **Operating System:** FreeRTOS
 * **Drivers:** STM32 HAL (Hardware Abstraction Layer)
-* **Build:** CMake & Ninja/Make
-* **Debugger:** OpenOCD / ST-Link
+* **Build System:** CMake & Ninja/Make
+* **Debugger:** OpenOCD / ST-Link / Cortex-Debug
 
 ## 📂 Project Structure
 
-* `Core/Inc/ILed.hpp`: Abstract interface for LED control.
-* `Core/Inc/Stm32Led.hpp`: Concrete implementation using HAL and RAII.
-* `Core/Src/app_main.cpp`: Main C++ application entry point using smart pointers.
-* `CMakeLists.txt`: Build configuration integrating CubeMX generation with custom C++ logic.
+### 1. Modern C++ Base Module
+
+* `Core/Inc/ILed.hpp`: Abstract interface for hardware-independent LED control.
+* `Core/Inc/Stm32Led.hpp`: Concrete implementation using **RAII** to wrap GPIO operations.
+* `Core/Src/app_main.cpp`: Entry point demonstrating **Smart Pointer** usage for peripheral management.
+
+### 2. Advanced RTOS & DMA Module
+
+* `Core/Inc/IComm.hpp`: Interface for asynchronous communication protocols.
+* `Core/Src/UartCommunication.cpp`: Advanced UART driver featuring **Ring Buffer** and **DMA Event Callbacks**.
+* `Core/Src/main_cpp.cpp`: Bridging C and C++ worlds, managing RTOS task creation.
 
 ## 📦 How to Build
 
-1.  Open the project folder in **VS Code**.
-2.  Ensure **ARM GNU Toolchain** and **CMake** are installed.
-3.  Press `Ctrl+Shift+P` and select `CMake: Configure`.
-4.  Press `F7` (or Build button) to compile.
-5.  Press `F5` to flash and debug on the target.
+1. Open the project folder in **VS Code**.
+2. Ensure **ARM GNU Toolchain**, **CMake**, and **Ninja** are installed.
+3. Press `Ctrl+Shift+P` and select `CMake: Configure` (Select your ARM GCC toolchain).
+4. Press `F7` (or use the Build button) to compile the project.
+5. Press `F5` to flash the firmware and start a live debugging session.
 
 ---
-*Developed to explore the intersection of high-level software patterns and low-level hardware control.*
+
+*Developed by Ömür Ceran to explore the intersection of modern software engineering and high-performance embedded systems.*
+
+---
+
+**Sence bu yapı projeni tam olarak yansıtıyor mu?** Eğer istersen LIS3DH sensör verilerinin nasıl işlendiğine dair (örneğin ivme verilerinin dönüştürülmesi) teknik bir alt başlık daha ekleyebilirim. Would you like me to add a "Mathematical Data Processing" section?
