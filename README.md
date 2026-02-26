@@ -50,5 +50,3 @@ This repository demonstrates a **Modern C++ (C++17)** and **Real-Time OS** appro
 *Developed by Ömür Ceran to explore the intersection of modern software engineering and high-performance embedded systems.*
 
 ---
-
-**Sence bu yapı projeni tam olarak yansıtıyor mu?** Eğer istersen LIS3DH sensör verilerinin nasıl işlendiğine dair (örneğin ivme verilerinin dönüştürülmesi) teknik bir alt başlık daha ekleyebilirim. Would you like me to add a "Mathematical Data Processing" section?
