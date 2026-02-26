@@ -1,0 +1,8 @@
+C:/Users/ceran/Desktop/Stm32_test_dma/RAII_DMA_RTOS_LIS3DH/build/Debug/CMakeFiles/RAII_DMA_RTOS_LIS3DH.dir
+C:/Users/ceran/Desktop/Stm32_test_dma/RAII_DMA_RTOS_LIS3DH/build/Debug/CMakeFiles/edit_cache.dir
+C:/Users/ceran/Desktop/Stm32_test_dma/RAII_DMA_RTOS_LIS3DH/build/Debug/CMakeFiles/rebuild_cache.dir
+C:/Users/ceran/Desktop/Stm32_test_dma/RAII_DMA_RTOS_LIS3DH/build/Debug/cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir
+C:/Users/ceran/Desktop/Stm32_test_dma/RAII_DMA_RTOS_LIS3DH/build/Debug/cmake/stm32cubemx/CMakeFiles/FreeRTOS.dir
+C:/Users/ceran/Desktop/Stm32_test_dma/RAII_DMA_RTOS_LIS3DH/build/Debug/cmake/stm32cubemx/CMakeFiles/USB_Host_Library.dir
+C:/Users/ceran/Desktop/Stm32_test_dma/RAII_DMA_RTOS_LIS3DH/build/Debug/cmake/stm32cubemx/CMakeFiles/edit_cache.dir
+C:/Users/ceran/Desktop/Stm32_test_dma/RAII_DMA_RTOS_LIS3DH/build/Debug/cmake/stm32cubemx/CMakeFiles/rebuild_cache.dir

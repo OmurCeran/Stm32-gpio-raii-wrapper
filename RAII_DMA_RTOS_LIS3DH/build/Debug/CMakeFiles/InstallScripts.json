@@ -1,0 +1,8 @@
+{
+	"InstallScripts" : 
+	[
+		"C:/Users/ceran/Desktop/Stm32_test_dma/RAII_DMA_RTOS_LIS3DH/build/Debug/cmake_install.cmake",
+		"C:/Users/ceran/Desktop/Stm32_test_dma/RAII_DMA_RTOS_LIS3DH/build/Debug/cmake/stm32cubemx/cmake_install.cmake"
+	],
+	"Parallel" : false
+}
